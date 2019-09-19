@@ -10,11 +10,11 @@ jobs:
       env:
         MY_NAME: "Dan"
     - uses: azure/container-actions/docker-login@master
-         with:
-           login-server: danlep0820.azurecr.io
-           username: ${{ secrets.REGISTRY_USERNAME }}
-           password: ${{ secrets.REGISTRY_PASSWORD }}
+        with:
+          login-server: danlep0820.azurecr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
     
-       - run: |
-           docker build . -t danlep0820.azurecr.io/githubbuild:${{ github.sha }}
-           docker push danlep0820.azurecr.io/githubbuild:${{ github.sha }}
+        - run: |
+          docker build . -t danlep0820.azurecr.io/githubbuild:${{ github.sha }}
+          docker push danlep0820.azurecr.io/githubbuild:${{ github.sha }}
