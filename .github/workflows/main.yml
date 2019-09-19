@@ -8,4 +8,4 @@ on: push
       - uses: actions/checkout@master
       - uses: ./action-a
         env:
-          MY_NAME: "Mona"
+          MY_NAME: "Dan"
